@@ -1,4 +1,6 @@
-from flask import Blueprint, jsonify
+from sqlalchemy.exc import IntegrityError
+from flask import Blueprint, jsonify, request
+from models.db import db
 from models.product import Products
 
 products = Blueprint('products', __name__)

@@ -5,8 +5,6 @@ from models.client import Client
 
 client = Blueprint('client', __name__)
 
-
-
 @client.route('/api/clients')
 def get_client():
     clients = Client.query.all()
